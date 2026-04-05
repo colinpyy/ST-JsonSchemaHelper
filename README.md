@@ -2,7 +2,7 @@
 Json Schema助手插件，使酒馆支持通过纯Json Schema格式或Javascript代码形式注入Json Schema实现结构化输出。
 
 ## 注意事项
-本功能基于SillyTavern原生的结构化输出API，兼容多种API形式，但使用前请确认所使用的API是否支持结构化输出功能。
+本功能基于SillyTavern原生的[结构化输出API](https://github.com/SillyTavern/SillyTavern/pull/4272)，兼容多种API形式，但使用前请确认所使用的API是否支持结构化输出功能。
 
 ## 编写指示
 
