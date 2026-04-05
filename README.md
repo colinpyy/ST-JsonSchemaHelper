@@ -32,12 +32,13 @@ Json Schema助手插件，使酒馆支持通过纯Json Schema格式或Javascript
     }
 }
 ```
+为满足SillyTavern的Json Schema注入要求，其原始Json Schema格式存放在value键值中，最外层的"name"、"descriptin"、"strict"并不会实际传递给大模型API，因此请勿在最外层的description中撰写角色卡内容。
+
 具体支持的Json架构请阅读例如 [Gemini API 文档](https://ai.google.dev/gemini-api/docs/structured-output?hl=zh-cn&example=recipe#json_schema_support)
 
-建议自行搜索使用可视化的Json Schema编辑器（可视化编辑可能无法使用anyOf、oneOf），并记得在最后额外添加一次层嵌套，编辑得到的Json Schema放入"value"的键值中并添加"name"键值对。
+支持使用<user>、{{user}}等宏，编写建议自行搜索使用可视化的Json Schema编辑器（可视化编辑可能无法使用anyOf、oneOf），并记得在最后额外添加一次层嵌套，编辑得到的Json Schema放入"value"的键值中并添加"name"键值对。
 
 ### 动态JavaScript模式
-为满足SillyTavern的Json Schema注入要求，其原始Json Schema格式存放在value键值中，最外层的"name"、"descriptin"、"strict"并不会实际传递给大模型API，因此请勿在最外层的description中撰写角色卡内容。
 
 本插件也支持使用Javascript代码动态修改Json Schema，要使用本功能请切换到"动态JavaScript"模式，此时可以变量lastAiJson来调用上一次AI回复的Json内容。例如：
 
