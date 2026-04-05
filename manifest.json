@@ -1,0 +1,12 @@
+{
+    "display_name": "JsonSchemaHelper",
+    "loading_order": 1,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "",
+    "version": "1.0.0",
+    "author": "colinpyy",
+    "description": "允许在SillyTavern中向Google AI Studio或OpenAI兼容模式发送请求时注入自定义JsonSchema以启用结构化输出功能，支持使用JavaScript根据具有历史回复动态修改注入的JaonSchema。",
+    "auto_update": false
+}
