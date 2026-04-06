@@ -176,11 +176,13 @@
     function getLastAIMessageJson() {
         const context = SillyTavern.getContext();
         const chat = context.chat;
+        let userRound = 0;
         if (!chat || !Array.isArray(chat) || chat.length === 0) return null;
-
         for (let i = chat.length - 1; i >= 0; i--) {
             const msg = chat[i];
-            if (!msg.is_user && !msg.is_system) {
+            if(msg.is_user){
+                userRound +=1;
+            }else if(!msg.is_user && !msg.is_system && userRound > 0) {
                 const content = msg.mes;
                 if (!content) continue;
                 const cleanContent = content.replace(/^```json\s*/i, '').replace(/\s*```$/, '').trim();

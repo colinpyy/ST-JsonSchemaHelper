@@ -5,8 +5,8 @@
     "optional": [],
     "js": "index.js",
     "css": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "colinpyy",
     "description": "允许在SillyTavern中向Google AI Studio或OpenAI兼容模式发送请求时注入自定义JsonSchema以启用结构化输出功能，支持使用JavaScript根据上一次AI回复动态修改注入的JaonSchema。",
-    "auto_update": false
+    "auto_update": true
 }
